@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let numeros = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      let intro = parseInt(prompt("Introduce un número del 1 al 10:"));
+      while (intro > 10) {
+        intro = parseInt(prompt("Introduce un número del 1 al 10:"));
+      }
+      do {
+        numeros[intro] = numeros[intro] + 1;
+        intro = parseInt(prompt("Introduce un número del 1 al 10:"));
+        while (intro > 10) {
+          intro = parseInt(prompt("Introduce un número del 1 al 10:"));
+        }
+      } while (intro >= 0);
+      for (let i = 0; i < numeros.lenght; i++) {
+        console.log(i + "   " + numeros[i]);
+      }
+    </script>
+  </body>
+</html>
